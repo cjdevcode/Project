@@ -1,0 +1,93 @@
+﻿/*Diseño usando Grid*/
+
+* {box-sizing: border-box;}
+
+body {background-color: #C1E3EB; font-family: Arial;}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+  grid-template-areas: "left" "center" "right" "footer footer footer";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+header {
+  background-color: #323e88;
+  text-align: center;
+  padding: 0.3em 0;
+}
+
+header a {
+  color: silver;
+  font-family: Cooper;
+  font-size: 2.7em;
+  text-decoration: none;
+  text-shadow: 2px 2px 1px black;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0.625em 0 0 0;
+  background: #454545;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #DEDEDE;
+  padding: 0.625em;
+  font-family: Impact;
+}
+
+h1 {margin: 5px 0;
+  text-align: center; 
+  font-size: 1.5em;
+  color: #323e88;
+  text-shadow: 1px 1px 2px ;
+}
+
+#test {margin-left: auto;}
+
+nav a:hover {
+  background: #666;
+  color: white;
+}
+
+.left, article, .right, footer, .blog div {
+  padding: 0.625em;
+  background-color: #454545;
+  border-radius: 10px;
+  color: #DEDEDE;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+#medio {line-height: 3em; }
+
+footer {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  color: #FFD6D6;
+  text-shadow: 2px 2px 2px #333;
+  font-size: large;
+  font-weight: bold;
+}
+
+.blog a {text-decoration: none; color: #14FF14; }
+.blog {display: flex; flex-direction: column; background: none; padding: 0;}
+.blog div {background: #454545; margin-bottom: 10px;}
+.blog div:last-child {margin-bottom: 0;}
+
+@media (max-width: 700px) {
+
+main {display: grid; grid-template-columns: 1fr;}
+.left img {float: left; width: 33.33%;}
+}
+
+@media (max-width:400px){
+nav ul {flex-direction: column; text-align: center;}
+}
