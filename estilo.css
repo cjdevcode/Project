@@ -51,7 +51,7 @@ h1 {margin: 5px 0;
 
 #test {margin-left: auto;}
 
-nav a:hover {
+nav a:hover, nav a:focus {
   background: #666;
   color: white;
 }
