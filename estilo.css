@@ -75,6 +75,7 @@ footer {
   text-shadow: 2px 2px 2px #333;
   font-size: large;
   font-weight: bold;
+  line-height: 0.8em;
 }
 
 .blog a {text-decoration: none; color: #14FF14; }
