@@ -1,6 +1,12 @@
 ﻿/*Diseño usando Grid*/
 
-* {box-sizing: border-box;}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
   background-color: #C1E3EB; 
