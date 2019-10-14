@@ -2,7 +2,10 @@
 
 * {box-sizing: border-box;}
 
-body {background-color: #C1E3EB; font-family: Arial;}
+body {
+  background-color: #C1E3EB; 
+  font-family: 'Montserrat', sans-serif;
+}
 
 main{
   display: grid;
@@ -20,7 +23,7 @@ header {
 
 header a {
   color: silver;
-  font-family: Cooper;
+  font-family: 'Baloo', cursive;
   font-size: 2.7em;
   text-decoration: none;
   text-shadow: 2px 2px 1px black;
@@ -85,10 +88,10 @@ footer {
 
 @media (max-width: 700px) {
 
-main {display: grid; grid-template-columns: 1fr;}
-.left img {float: left; width: 33.33%;}
+  main {display: grid; grid-template-columns: 1fr;}
+  .left img {float: left; width: 33.33%;}
 }
 
 @media (max-width:400px){
-nav ul {flex-direction: column; text-align: center;}
+  nav ul {flex-direction: column; text-align: center;}
 }
