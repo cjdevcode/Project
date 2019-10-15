@@ -95,6 +95,7 @@ footer {
   font-size: large;
   font-weight: bold;
   line-height: 0.8em;
+  background-color: #323e88;
 }
 
 .blog a {text-decoration: none; color: #14FF14; }
