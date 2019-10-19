@@ -9,101 +9,64 @@
 	<title>Bootstrap</title>
 </head>
 <body>
-	<div class="container">
-		<header class="bgimage">
-			<div class="container">
-				<h1>Headline</h1>	
-			</div>			
-		</header>
-		<div class="row">
-		<div class="col-sm-6">
-			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
-		</div>
-		<div class="col-sm-6">
-			<p class="text-success">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
-		</div>
-		<div class="col-sm-6">
-			<p class="text-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
-		</div>
-		<div class="col-sm-6">
-			<p class="text-danger">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
-		</div>	
-		</div>
-		<p class="img-thumbnail"><img src="pics/Graphtec.jpg" class="img-responsive img-rounded">Graphtec CE-5000 - Made in Japan</p>
-		<div><button class="btn-primary btn-lg">Inicio</button><span class="btn btn-warning btn-md">Click</span><span class="btn-sm btn btn-danger">Click</span><span class="btn btn-success btn-xs">Click</span><span class="btn btn-link">Click</span><span class="btn btn-default">Click</span><span class="btn btn-info">Click</span></div><br><br>
+	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
-  <div class="row">
-    <section class="col-xs-12">
-<div class="table-responsive">
-	 <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>Class</th>
-            <th>Color</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="info">
-            <th scope="row">Normal</th>
-            <td>Default</td>
-            <td>Default color to a particular row or cell</td>
-          </tr>
-          <tr class="active">
-            <th scope="row">active</th>
-            <td>Gray</td>
-            <td>Active color to a particular row or cell</td>
-          </tr>
-          <tr class="success">
-            <th scope="row">success</th>
-            <td>Green</td>
-            <td>A successful or positive action</td>
-          </tr>
-          <tr class="info">
-            <th scope="row">info</th>
-            <td>Blue</td>
-            <td>A neutral informative change or action</td>
-          </tr>
-          <tr class="warning">
-            <th scope="row">warning</th>
-            <td>Yellow</td>
-            <td>A warning that might need attention, but not too scary</td>
-          </tr>
-          <tr class="danger">
-            <th scope="row">danger</th>
-            <td>Red</td>
-            <td>Dangerous or potentially negative action</td>
-          </tr>
-        </tbody>
-      </table>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#featured">Wisdom <span class="subhead">Pet Medicine</span></a>
+			</div><!-- navbar-header -->
+			<div class="collapse navbar-collapse" id="collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#featured">Home</a></li>
+					<li class="active"><a href="#mission">Mission</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#staff">Staff</a></li>
+					<li><a href="#testimonials">Testimonials</a></li>
+				</ul>
+			</div><!-- collapse navbar-collapse -->
+		</div><!-- container -->
+	</nav>
 
-</div>
-     
-    </section>
-  </div><!-- row -->   
-</div><!-- content container -->
-		
-	</div>
+	<div class="content container">
+		<div class="row">
+			<section class="col-sm-12">
+				<div class="carousel slide" id="move">
+					<ol class="carousel-indicators">
+						<li data-target="move" data-slide-to="0"></li>
+						<li data-target="move" data-slide-to="1"></li>
+						<li data-target="move" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="pics/carousel-lifestyle.jpg" alt="Lifestyle Photo">
+							<div class="carousel-caption">Hello World</div>					
+						</div>
+						<div class="item">
+							<img src="pics/carousel-mission.jpg" alt="Mission">
+						</div>
+						<div class="item">
+							<img src="pics/carousel-vaccinations.jpg" alt="Vaccinations">	
+						</div>
+					</div>
+					<a href="#move" class="left carousel-control" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<a href="#move" class="right carousel-control" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div>
+
+
+				<h2>Our Mission</h2>
+
+				<p>Wisdom Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis and treatment of companion animals including dogs, cats, birds, reptiles, rodents, and fish. We apply the wisdom garnered in the centuries old tradition of veterinary medicine, to find the safest treatments and cures.</p>
+
+				<p>We strive to be your pet's medical experts from youth through the senior years. We build preventative health care plans for each and every one of our patients, based on breed, age, and sex, so that your pet receives the most appropriate care at crucial milestones. We want to give your pet a long and healthy life.</p>
+
+			</section>
+		</div><!-- row -->   
+	</div><!-- content container -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<!-- <script src="js/script.js"></script> -->

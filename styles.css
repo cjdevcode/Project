@@ -5,10 +5,15 @@
 	height: 200px;
 }
 
-span {
+/*span {
 	margin-left: 30px;
-}
+}*/
 
-img {
-	
+.imgead {
+	background-image: url('pics/reptiles.jpg');
+	background-position: bottom center;
+	background-size: contain;
+	height: 100px;
+	font-weight: 700;
+	color: #0f0;
 }
