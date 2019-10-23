@@ -1,19 +1,14 @@
-.bgimage {
-	background-image: url('pics/reptiles.jpg');
-	background-position: center center;
-	background-size: cover;
-	height: 200px;
+.jumbotron {
+	background-color: #9575cd;
+	color: #fff;
 }
 
-/*span {
-	margin-left: 30px;
-}*/
+footer {
+	background-color: #d1c4e9;
+	padding: 20px 0;
+	margin-top: 20px;
+}
 
-.imgead {
-	background-image: url('pics/reptiles.jpg');
-	background-position: bottom center;
-	background-size: contain;
-	height: 100px;
-	font-weight: 700;
-	color: #0f0;
+.row-content {
+	padding: 50px 0;
 }
