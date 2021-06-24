@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de JavaScript</title>
 </head>
+<style>
+    .new {
+        color: blueviolet
+    }
+
+    .old {
+        color: chartreuse;
+        font-size: 2rem;
+    }
+</style>
+
 <body>
-    <h1>JavaScript</h1>
-<script>
-    let greet = "First sentence";
-    console.log(greet);
-</script>
+
+    <h1 id="one">JavaScript</h1>
+    <p>este parrafo no es seleccionado</p>
+    <div id="it">
+        <p>this program is really easy to understand</p>
+        <p>but python is the easiest.</p>
+        <p>C language i don't know yet</p>
+        <p>PHP is one of the best too.</p>
+    </div>
+    <article>
+        <p>hola hola</p>
+    </article>
+
+
+    <script>
+        document.querySelector("p").innerHTML = "<p>green</p>";
+        let mi = document.querySelector('#it');
+        mi.innerHTML = "<h2 color='purple'>titulo secundario</h2>";
+        //document.querySelector('p').setAttribute("align", "center");
+        document.querySelector('#it').appendChild(document.createElement('p').appendChild(document.createTextNode('otro parrafo adicional')))
+
+    </script>
 </body>
+
 </html>
