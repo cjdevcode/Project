@@ -21,25 +21,34 @@
 <body>
 
     <h1 id="one">JavaScript</h1>
-    <p>este parrafo no es seleccionado</p>
-    <div id="it">
-        <p>this program is really easy to understand</p>
-        <p>but python is the easiest.</p>
-        <p>C language i don't know yet</p>
-        <p>PHP is one of the best too.</p>
+    <div class="log">
+        <p>este parrafo no es seleccionado</p>
+        <div id="it">
+            <p>this program is really easy to understand</p>
+            <p>but python is the easiest.</p>
+            <p>C language i don't know yet</p>
+            <p>PHP is one of the best too.</p>
+        </div>
+        <article>
+            <p>Fin de la clase.</p>
+        </article>
     </div>
-    <article>
-        <p>hola hola</p>
-    </article>
+
 
 
     <script>
-        document.querySelector("p").innerHTML = "<p>green</p>";
+        document.querySelector("p").innerHTML = "<h2 style='color:purple'>Chapter 2</h2>";
         let mi = document.querySelector('#it');
-        mi.innerHTML = "<h2 color='purple'>titulo secundario</h2>";
+        //mi.innerHTML = "<h2 color='purple'>titulo secundario</h2>";
         //document.querySelector('p').setAttribute("align", "center");
         document.querySelector('#it').appendChild(document.createElement('p').appendChild(document.createTextNode('otro parrafo adicional')))
-
+        men = document.createTextNode(' Aqui un nuevo texto...!!!');
+        document.querySelector("p").appendChild(men);
+        bor = document.querySelector("#it");
+        bor.removeChild(bor.children[0]);
+        document.querySelector('h1').style.color = "green";
+        document.querySelector('.log').style.color = "red";
+        document.querySelector('.log  #it p').style.color = "blue";
     </script>
 </body>
 
