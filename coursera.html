@@ -5,104 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de JavaScript</title>
+    <title>Challenge 26</title>
 </head>
-<style>
-    .new {
-        color: blueviolet
-    }
-
-    .old {
-        color: chartreuse;
-        font-size: 2rem;
-    }
-
-    section {
-        width: 100px;
-        height: 100px;
-        background-color: crimson;
-    }
-</style>
 
 <body>
-
-    <h1 id="one">JavaScript</h1>
-    <div class="log">
-        <p>este parrafo no es seleccionado</p>
-        <div id="it">
-            <p>this program is really easy to understand</p>
-            <p>but python is the easiest.</p>
-            <p>C language i don't know yet</p>
-            <p>PHP is one of the best too.</p>
-        </div>
-        <article>
-            <p>Fin de la clase.</p>
-        </article>
+    <h1>JavaScript Challenge 26</h1>
+    <button>Add a paragraph</button>
+    <button id="bt2">Remove a paragraph</button>
+    <div>
+        <p id="pp">This a paragraph number 1</p>
     </div>
-    <button>Press me please!</button><br>
-    <a href="https://www.google.com">google</a><br><br>
-    <form action="">
-        <label for="">Formato</label>
-        <input type="text"><br>
-        <label for="check">Elegir</label>
-        <input type="checkbox" id="check"><br>
-        <label for="opcion">Opcion</label>
-        <input type="radio" id="opcion"><br><br>
-        <input type="submit" value="Submit"><br><br>
-        <input type="button" value="enter"><br>
-    </form><br>
-    <h3>Put your mouse over here...</h3>
-    <section>
 
-    </section>
 
     <script>
-        document.querySelector("p").innerHTML = "<h2 style='color:purple'>Chapter 2</h2>";
-        let mi = document.querySelector('#it');
-        //mi.innerHTML = "<h2 color='purple'>titulo secundario</h2>";
-        //document.querySelector('p').setAttribute("align", "center");
-        document.querySelector('#it').appendChild(document.createElement('p').appendChild(document.createTextNode('otro parrafo adicional')))
-        men = document.createTextNode(' Aqui un nuevo texto...!!!');
-        document.querySelector("p").appendChild(men);
-        bor = document.querySelector("#it");
-        bor.removeChild(bor.children[0]);
-        document.querySelector('h1').style.color = "green";
-        document.querySelector('.log').style.color = "red";
-        document.querySelector('.log  #it p').style.color = "blue";
-        bt = document.querySelector('h1');
-        function b(e) {
-            e.target.style.fontFamily = 'arial';
-            alert('Very Good!')
-        };
-        document.querySelector('button').addEventListener('click', () => alert('Great Great...'));
-        document.querySelector('p').addEventListener('click', b);
-        bt.onclick = () => alert('You are the Best and Great!!!');
-        document.querySelector('a').addEventListener('click', function (event) {
-            event.preventDefault();
-            //alert('hello');
-            event.target.style.color = 'yellow';
+        let bt = document.querySelector('button');
+        let dv = document.querySelector('div');
+        let rm = document.querySelector('#bt2');
+        let pa = document.querySelector('#pp');
+        let count = 1;
+        bt.addEventListener("click", function () {
+            count++;
+            pa.innerHTML = `This is paragraph number ${count}`;
+            let el = document.createElement('p');
+            let txt = document.createTextNode('NEW PARAGRAPH AND ELEMENT');
+            dv.appendChild(el);
+            el.appendChild(txt);
         });
-        formas = document.querySelector('form');
-        formas.addEventListener('submit', (e) => {
-            //e.preventDefault();
-            e.target.style.color = "red";
-            alert(document.querySelector('input').value)
-        });
-        subt = document.querySelector('h3');
-        play = document.querySelector('section');
-        play.addEventListener('mouseover', function(){
-            play.style.backgroundColor="yellow";
-            subt.innerHTML ='otro titulo';
-        });
-        play.addEventListener('mouseout', function(){
-            play.style.backgroundColor="crimson";
-            subt.innerHTML ='cuando se saca el mouse';
-        });
-        subt.addEventListener('mouseover', function(){
-            play.style.backgroundColor="blue";
-            subt.innerHTML ='put your mouse over here...';
-        });
+        rm.addEventListener('click', () => {
+            if (count > 1) {
+                
+                tor = document.querySelectorAll('div p');
+                dv.removeChild(tor[tor.length - 1]);
+                count--;
+                //pa.innerHTML = `This is paragraph number ${count}`;
+            }
+            else {
+                alert('no esta permitido!')
+            }
 
+        })
 
     </script>
 </body>
