@@ -5,47 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge 26</title>
+    <title>Challenge 29</title>
 </head>
-
-<body>
-    <h1>JavaScript Challenge 26</h1>
-    <button>Add a paragraph</button>
-    <button id="bt2">Remove a paragraph</button>
-    <div>
-        <p id="pp">This a paragraph number 1</p>
-    </div>
-
-
+<style>
+    body {
+        height: 4000px;
+    }
+    .one {background-color: beige; transition: all 2s;}
+    .two {background-color: blueviolet; transition: all 2s;}
+    .three {background-color: coral; transition: all 2s;}
+    .four {background-color: cornflowerblue; transition: all 2s;}
+    .five {background-color: darkgoldenrod; transition: all 2s;};
+</style>
+<body class="one">
+    <h1>JavaScript Challenge 29</h1>
+    <p>Scroll Down!</p>
     <script>
-        let bt = document.querySelector('button');
-        let dv = document.querySelector('div');
-        let rm = document.querySelector('#bt2');
-        let pa = document.querySelector('#pp');
-        let count = 1;
-        bt.addEventListener("click", function () {
-            count++;
-            pa.innerHTML = `This is paragraph number ${count}`;
-            let el = document.createElement('p');
-            let txt = document.createTextNode('NEW PARAGRAPH AND ELEMENT');
-            dv.appendChild(el);
-            el.appendChild(txt);
-        });
-        rm.addEventListener('click', () => {
-            if (count > 1) {
-                
-                tor = document.querySelectorAll('div p');
-                dv.removeChild(tor[tor.length - 1]);
-                count--;
-                //pa.innerHTML = `This is paragraph number ${count}`;
-            }
-            else {
-                alert('no esta permitido!')
-            }
+        bd = document.querySelector('body');
+        window.addEventListener('scroll', function(){
+            pos = window.pageYOffset;
+            document.querySelector('p').innerHTML = pos;
+            switch(true){
+                case  pos < 500:
+                pos.className = 'one';
+                break;
+                case pos < 1000:
+                bd.className = 'two';
+                break;
+                case pos < 1500:
+                    bd.className = 'three';
+                break;
+                case pos < 2000:
+                    bd.className = 'four'
+                    break;
+                default:
+                    bd.className = 'five';
 
+            }
+           
         })
-
     </script>
+
 </body>
 
 </html>
