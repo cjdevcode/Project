@@ -1,51 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge 29</title>
+	<meta charset="UTF-8">
+	<title>Miles to Kilometers Converter</title>
+	
+	<!--/ /-------- Normalize CSS --------/ /-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	
+	<!--/ /-------- Google Fonts --------/ /-->
+	<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans&display=swap" rel="stylesheet">
+	
+	<!--/ /-------- My Styles --------/ /-->
+	<link href="styles.css" rel="stylesheet">
+
 </head>
-<style>
-    body {
-        height: 4000px;
-    }
-    .one {background-color: beige; transition: all 2s;}
-    .two {background-color: blueviolet; transition: all 2s;}
-    .three {background-color: coral; transition: all 2s;}
-    .four {background-color: cornflowerblue; transition: all 2s;}
-    .five {background-color: darkgoldenrod; transition: all 2s;};
-</style>
-<body class="one">
-    <h1>JavaScript Challenge 29</h1>
-    <p>Scroll Down!</p>
-    <script>
-        bd = document.querySelector('body');
-        window.addEventListener('scroll', function(){
-            pos = window.pageYOffset;
-            document.querySelector('p').innerHTML = pos;
-            switch(true){
-                case  pos < 500:
-                pos.className = 'one';
-                break;
-                case pos < 1000:
-                bd.className = 'two';
-                break;
-                case pos < 1500:
-                    bd.className = 'three';
-                break;
-                case pos < 2000:
-                    bd.className = 'four'
-                    break;
-                default:
-                    bd.className = 'five';
 
-            }
-           
-        })
-    </script>
+<body>
 
+	<h1>Miles to Kilometers Converter</h1>
+    
+    <div class="container top">
+    	<p>Type in a number of miles and click the button to convert the distance to kilometers.</p>
+        
+        <form method="post" action="somephpfile.php" id="convert">
+        
+        	<input type="text" name="distance" id="distance" placeholder="distance">
+            <input type="submit" name="convertdist" value="Convert Distance">
+        
+        </form>
+    </div>
+    <div class="container bottom" id="answer">
+    	<h2 class="invisible">Answer goes here</h2>
+    </div>
 </body>
-
 </html>
