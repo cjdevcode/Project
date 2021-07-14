@@ -1,8 +1,31 @@
+body {
+    background-color: cornsilk;
+    /* margin: 0; */
+    /* width: 50%; */
+    border: 2px solid black;
+}
 h1 {
     color:darkred;
-    text-decoration: dashed;
+    text-decoration: underline dashed;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
 }
 
 p {
     color:forestgreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div {
+    background-color: gold;
+    height: 100px;
+    width: 50%;
+    border: rgb(19, 32, 211) 2px solid ;
+}
+
+.sec {
+    width: 50%;
+    background-color: blue;
+    height: 50%;
+    border: solid black 2px;
 }
