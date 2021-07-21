@@ -6,7 +6,7 @@ body {
 }
 h1 {
     color:darkred;
-    text-decoration: underline dashed;
+    text-decoration: underline;
     font-family: 'Courier New', Courier, monospace;
     font-size: 3em;
 }
