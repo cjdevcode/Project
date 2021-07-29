@@ -10,26 +10,70 @@
 </head>
 
 <body>
-	<h1>Links</h1>
-	<p class="cursive">Movies to Download</p>
-	<p>Casi todos podemos querer.</p>
-	<p class="cursive">Pero pocos sabemos amar</p>
-	<p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, error reprehenderit totam, nihil vitae ut blanditiis sequi illum itaque corporis aut voluptate repudiandae! Consequuntur laborum architecto iure perspiciatis consequatur reiciendis?</p>
-	<p class="cursive">Esta vida es la mejor de todas.</p>
-	<ol>
-		<li><a href="https://1fichier.com/?tovem0s2zto5z7wu3opm#Synchronization+Service" target="_blank">RRB2</a></li>
-		<li><a href="https://1fichier.com/?kvlm95vdfxoamqkm3beq#Synchronization+Service" target="_blank">VN</a></li>
-	</ol>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<nav>
+		<ul>
+			<li class="one">Fruits:
+				<ul>
+					<li>Lime</li>
+					<li>Grape</li>
+					<li>Apple</li>
+					<li>Cherry</li>
+				</ul>
+			</li>
+			<li class="two">Cars:
+				<ul>
+					<li>Dodge</li>
+					<li>Ferrari</li>
+					<li>Honda</li>
+					<li>Chevrolet</li>
+				</ul>
+			</li>
+			<li class="three">Books:
+				<ul>
+					<li>The Secret</li>
+					<li>Odisea</li>
+					<li>The Bible</li>
+					<li>Leonardo Da Vinci</li>
+				</ul>
+			</li>
+			<li class="four">Colors:
+				<ul>
+					<li>Red</li>
+					<li>Blue</li>
+					<li>Rose</li>
+					<li>Purple</li>
+				</ul>
+			</li>
+			<li class="five">Animals:
+				<ul>
+					<li>Lion</li>
+					<li>Dog</li>
+					<li>Cat</li>
+					<li>Mouse</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		$('h1').css('color', 'green');
-		$('p').odd().css('color', 'rgb(155,50,200)');
-		$('#lorem').css('font-size', '2em');
-		$('#lorem').css('color', 'green');
-		$('#lorem').css('font-family', 'impact');
-		$('body').css('border', '1px solid red');
-		$('.cursive').css('font-family', 'cursive');
-		
+		//hide all sub ul
+		let sel = document.querySelectorAll('ul li ul');
+		for (let i = 0; i < sel.length; i++) {
+			sel[i].className = 'hid-menu';
+		}
+
+		let one = document.querySelector('.one');
+		one.addEventListener('click', function () { document.querySelector('.one ul').className = 'show' });
+		let two = document.querySelector('.two');
+		two.addEventListener('click', function () { document.querySelector('.two ul').className = 'show' });
+		let three = document.querySelector('.three');
+		three.addEventListener('click', function () { document.querySelector('.three ul').className = 'show' });
+		let four = document.querySelector('.four');
+		four.addEventListener('click', function () { document.querySelector('.four ul').className = 'show' });
+		let five = document.querySelector('.five');
+		five.addEventListener('click', function () { document.querySelector('.five ul').className = 'show' });
+
 	</script>
 </body>
 

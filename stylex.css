@@ -10,3 +10,9 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 3em;
 }
+.hid-menu {
+    display: none;
+}
+.show {
+    display: block;
+}
