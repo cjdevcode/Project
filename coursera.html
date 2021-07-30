@@ -64,15 +64,50 @@
 		}
 
 		let one = document.querySelector('.one');
-		one.addEventListener('click', function () { document.querySelector('.one ul').className = 'show' });
+		one.addEventListener('click', function () { 
+			document.querySelector('.one ul').className = 'show';
+			document.querySelector('.two ul').className = 'hid-menu';
+			document.querySelector('.three ul').className = 'hid-menu';
+			document.querySelector('.four ul').className = 'hid-menu';
+			document.querySelector('.five ul').className = 'hid-menu';
+
+		});
 		let two = document.querySelector('.two');
-		two.addEventListener('click', function () { document.querySelector('.two ul').className = 'show' });
+		two.addEventListener('click', function () { 
+			document.querySelector('.two ul').className = 'show';
+			document.querySelector('.one ul').className = 'hid-menu';
+			document.querySelector('.three ul').className = 'hid-menu';
+			document.querySelector('.four ul').className = 'hid-menu';
+			document.querySelector('.five ul').className = 'hid-menu';
+
+		});
 		let three = document.querySelector('.three');
-		three.addEventListener('click', function () { document.querySelector('.three ul').className = 'show' });
+		three.addEventListener('click', function () { 
+			document.querySelector('.three ul').className = 'show';
+			document.querySelector('.one ul').className = 'hid-menu';
+			document.querySelector('.two ul').className = 'hid-menu';
+			document.querySelector('.four ul').className = 'hid-menu';
+			document.querySelector('.five ul').className = 'hid-menu';
+
+		});
 		let four = document.querySelector('.four');
-		four.addEventListener('click', function () { document.querySelector('.four ul').className = 'show' });
+		four.addEventListener('click', function () { 
+			document.querySelector('.four ul').className = 'show';
+			document.querySelector('.one ul').className = 'hid-menu';
+			document.querySelector('.two ul').className = 'hid-menu';
+			document.querySelector('.three ul').className = 'hid-menu';
+			document.querySelector('.five ul').className = 'hid-menu';
+
+		});
 		let five = document.querySelector('.five');
-		five.addEventListener('click', function () { document.querySelector('.five ul').className = 'show' });
+		five.addEventListener('click', function () { 
+			document.querySelector('.five ul').className = 'show'; 
+			document.querySelector('.one ul').className = 'hid-menu';
+			document.querySelector('.two ul').className = 'hid-menu';
+			document.querySelector('.three ul').className = 'hid-menu';
+			document.querySelector('.four ul').className = 'hid-menu';
+
+		});
 
 	</script>
 </body>
