@@ -48,23 +48,9 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		for (let i = 0; i < document.querySelectorAll('ul li ul').length; i++) {
-			document.querySelectorAll('ul li ul')[i].className = 'hide';
-		}
-		const menu = document.querySelectorAll('.menu');
-		for (let i = 0; i < menu.length; i++) {
-			menu[i].addEventListener('click', function () {
-				if (document.querySelectorAll('ul li ul')[i].classList.contains('hide')) {
-					for (let i = 0; i < document.querySelectorAll('ul li ul').length; i++) {
-						document.querySelectorAll('ul li ul')[i].className = 'hide';
-					}
-					document.querySelectorAll('ul li ul')[i].className = 'show';
-				} else {
-					document.querySelectorAll('ul li ul')[i].className = 'hide';
-				}
-
-			});
-		}
+		/* $('ul li ul').css('display', 'none'); */
+		$('.menu ul').hide();
+		$('.menu').click(function(){$('ul').show()});
 
 	</script>
 </body>
