@@ -9,10 +9,17 @@
 </head>
 <body>
 	<h1>A New Challenge</h1>
-	<p class="para">Here is a paragraph</p>
+	<div>
+		<p>This is the first paragraph.</p>
+		<p>This is the second paragraph.</p>
+		<p>This is the third paragraph.</p>
+		<p>This is the last paragraph.</p>
+	</div>
+	<p>This is a outside paragraph</p>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		document.querySelector('.para').style.fontSize = '24px';
+		$('div p').css({'color':'red','font-size':'25px'});
+		
 	</script>
 </body>
 </html>
