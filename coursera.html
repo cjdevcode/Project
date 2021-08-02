@@ -1,58 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript and jQuery</title>
 	<link rel="stylesheet" href="stylex.css">
-	<title>CSS practices</title>
 </head>
-
 <body>
-	<h1>Menu</h1>
-	<ul>
-		<li class="menu"><a href="#">Lista1</a>
-			<ul>
-				<li>Item1</li>
-				<li>Item2</li>
-				<li>Item3</li>
-				<li>Item4</li>
-			</ul>
-		</li>
-		<li class="menu"><a href="#">Lista2</a>
-			<ul>
-				<li>Item1</li>
-				<li>Item2</li>
-				<li>Item3</li>
-				<li>Item4</li>
-			</ul>
-		</li>
-		<li class="menu"><a href="#">Lista3</a>
-			<ul>
-				<li>Item1</li>
-				<li>Item2</li>
-				<li>Item3</li>
-				<li>Item4</li>
-			</ul>
-		</li>
-		<li class="menu"><a href="#">Lista4</a>
-			<ul>
-				<li>Item1</li>
-				<li>Item2</li>
-				<li>Item3</li>
-				<li>Item4</li>
-			</ul>
-		</li>
-	</ul>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<h1>A New Challenge</h1>
+	<p class="para">Here is a paragraph</p>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		/* $('ul li ul').css('display', 'none'); */
-		$('.menu ul').hide();
-		$('.menu').click(function(){$('ul').show()});
-
+		document.querySelector('.para').style.fontSize = '24px';
 	</script>
 </body>
-
 </html>
