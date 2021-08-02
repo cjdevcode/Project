@@ -1,24 +1,18 @@
 body {
     background-color: cornsilk;
     margin: 10px;
-    /* width: 50%; */
-    border: 2px solid black;
 }
 h1 {
     color:darkred;
-    text-decoration: underline;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 3em;
+    font-size: 2em;
 }
-.hid-menu {
+.hide {
     display: none;
 }
 .show {
     display: block;
 }
-li {
-    cursor: pointer;
-}
-ul {
-    display: inline-block;
-}
+/* a{
+    text-decoration:none;
+} */

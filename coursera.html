@@ -10,104 +10,61 @@
 </head>
 
 <body>
-	<nav>
-		<ul>
-			<li class="one">Fruits:
-				<ul>
-					<li>Lime</li>
-					<li>Grape</li>
-					<li>Apple</li>
-					<li>Cherry</li>
-				</ul>
-			</li>
-			<li class="two">Cars:
-				<ul>
-					<li>Dodge</li>
-					<li>Ferrari</li>
-					<li>Honda</li>
-					<li>Chevrolet</li>
-				</ul>
-			</li>
-			<li class="three">Books:
-				<ul>
-					<li>The Secret</li>
-					<li>Odisea</li>
-					<li>The Bible</li>
-					<li>Leonardo Da Vinci</li>
-				</ul>
-			</li>
-			<li class="four">Colors:
-				<ul>
-					<li>Red</li>
-					<li>Blue</li>
-					<li>Rose</li>
-					<li>Purple</li>
-				</ul>
-			</li>
-			<li class="five">Animals:
-				<ul>
-					<li>Lion</li>
-					<li>Dog</li>
-					<li>Cat</li>
-					<li>Mouse</li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
+	<h1>Menu</h1>
+	<ul>
+		<li class="menu"><a href="#">Lista1</a>
+			<ul>
+				<li>Item1</li>
+				<li>Item2</li>
+				<li>Item3</li>
+				<li>Item4</li>
+			</ul>
+		</li>
+		<li class="menu"><a href="#">Lista2</a>
+			<ul>
+				<li>Item1</li>
+				<li>Item2</li>
+				<li>Item3</li>
+				<li>Item4</li>
+			</ul>
+		</li>
+		<li class="menu"><a href="#">Lista3</a>
+			<ul>
+				<li>Item1</li>
+				<li>Item2</li>
+				<li>Item3</li>
+				<li>Item4</li>
+			</ul>
+		</li>
+		<li class="menu"><a href="#">Lista4</a>
+			<ul>
+				<li>Item1</li>
+				<li>Item2</li>
+				<li>Item3</li>
+				<li>Item4</li>
+			</ul>
+		</li>
+	</ul>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		//hide all sub ul
-		let sel = document.querySelectorAll('ul li ul');
-		for (let i = 0; i < sel.length; i++) {
-			sel[i].className = 'hid-menu';
+		for (let i = 0; i < document.querySelectorAll('ul li ul').length; i++) {
+			document.querySelectorAll('ul li ul')[i].className = 'hide';
 		}
+		const menu = document.querySelectorAll('.menu');
+		for (let i = 0; i < menu.length; i++) {
+			menu[i].addEventListener('click', function () {
+				if (document.querySelectorAll('ul li ul')[i].classList.contains('hide')) {
+					for (let i = 0; i < document.querySelectorAll('ul li ul').length; i++) {
+						document.querySelectorAll('ul li ul')[i].className = 'hide';
+					}
+					document.querySelectorAll('ul li ul')[i].className = 'show';
+				} else {
+					document.querySelectorAll('ul li ul')[i].className = 'hide';
+				}
 
-		let one = document.querySelector('.one');
-		one.addEventListener('click', function () { 
-			document.querySelector('.one ul').className = 'show';
-			document.querySelector('.two ul').className = 'hid-menu';
-			document.querySelector('.three ul').className = 'hid-menu';
-			document.querySelector('.four ul').className = 'hid-menu';
-			document.querySelector('.five ul').className = 'hid-menu';
-
-		});
-		let two = document.querySelector('.two');
-		two.addEventListener('click', function () { 
-			document.querySelector('.two ul').className = 'show';
-			document.querySelector('.one ul').className = 'hid-menu';
-			document.querySelector('.three ul').className = 'hid-menu';
-			document.querySelector('.four ul').className = 'hid-menu';
-			document.querySelector('.five ul').className = 'hid-menu';
-
-		});
-		let three = document.querySelector('.three');
-		three.addEventListener('click', function () { 
-			document.querySelector('.three ul').className = 'show';
-			document.querySelector('.one ul').className = 'hid-menu';
-			document.querySelector('.two ul').className = 'hid-menu';
-			document.querySelector('.four ul').className = 'hid-menu';
-			document.querySelector('.five ul').className = 'hid-menu';
-
-		});
-		let four = document.querySelector('.four');
-		four.addEventListener('click', function () { 
-			document.querySelector('.four ul').className = 'show';
-			document.querySelector('.one ul').className = 'hid-menu';
-			document.querySelector('.two ul').className = 'hid-menu';
-			document.querySelector('.three ul').className = 'hid-menu';
-			document.querySelector('.five ul').className = 'hid-menu';
-
-		});
-		let five = document.querySelector('.five');
-		five.addEventListener('click', function () { 
-			document.querySelector('.five ul').className = 'show'; 
-			document.querySelector('.one ul').className = 'hid-menu';
-			document.querySelector('.two ul').className = 'hid-menu';
-			document.querySelector('.three ul').className = 'hid-menu';
-			document.querySelector('.four ul').className = 'hid-menu';
-
-		});
+			});
+		}
 
 	</script>
 </body>
