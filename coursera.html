@@ -10,18 +10,23 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#" id="hidebox">hide</a></li>
-            <li><a href="#" id="showbox">show</a></li>
-            <li><a href="#" id="togglebox">toggle</a></li>
+            <li><a href="#" id="growbox">grow box</a></li>
+            <li><a href="#" id="growtext">grow text</a></li>
+            <li><a href="#" id="movebox">move box</a></li>
+            <li><a href="#" id="doall">do all</a></li>
+            <li><a href="#" id="sequence">sequence</a></li>
         </ul>
     </nav>
     
-    <div id="box"></div>
+    <div id="box">Chickens and Llamas!</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		$('#hidebox').click(function(){$('#box').hide('normal')});
-		$('#showbox').click(function(){$('#box').show('normal')});
-		$('#togglebox').click(function(){$('#box').toggle('normal')});
+		$('#growbox').click(function(){$('#box').animate({width:'500px'})})
+		$('#growtext').click(function(){$('#box').animate({fontSize:'2em'})})
+		$('#movebox').click(function(){$('#box').animate({left:'200px'})})
+		$('#doall').click(function(){$('#box').animate({fontSize:'2em',width:'500px',fontSize:'2em',left:'200px'})})
+		$('#sequence').click(function(){$('#box').animate({fontSize:'2em'}).animate({width:'500px'}).animate({left:'300px'})})
+
 	</script>
 </body>
 </html>

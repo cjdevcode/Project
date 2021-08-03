@@ -1,4 +1,4 @@
-body { padding:100px; }
+body { padding:50px; margin:0; }
 nav { margin-bottom:50px; }
 nav ul { overflow:hidden; border-left:1px solid #777676; margin:0; padding:0; list-style-type:none; }
 nav ul li { float:left; }
@@ -16,4 +16,11 @@ nav ul li a {
 }
 nav ul li a:hover { background:#D5D4D4; }
 
-#box { width:450px; height:300px; background:#4C90D8; }
+#box { 
+    width:260px; 
+    height:260px; 
+    background:#4C90D8; 
+    padding:20px;
+    color:#fff; 
+    position:absolute;
+}
