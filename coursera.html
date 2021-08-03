@@ -8,18 +8,21 @@
 	<link rel="stylesheet" href="stylex.css">
 </head>
 <body>
-	<h1>A New Challenge</h1>
-	<div>
-		<p>This is the first paragraph.</p>
-		<p>This is the second paragraph.</p>
-		<p>This is the third paragraph.</p>
-		<p>This is the last paragraph.</p>
-	</div>
-	<p>This is a outside paragraph</p>
+	<h1>Challenge Eleven</h1>
+	<ul>
+		<li><a href="#">link 1</a></li>
+		<li><a href="#">link 2</a></li>
+		<li><a href="#">link 3</a></li>
+		<li><a href="#">link 4</a></li>
+	</ul>
+	<p>link1</p>
+	<p>link2</p>
+	<p>link3</p>
+	<p>link4</p>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		$('div p').css({'color':'red','font-size':'25px'});
-		
+		$('ul li a').click(function(){$('p').css('color','gold')})
+
 	</script>
 </body>
 </html>
