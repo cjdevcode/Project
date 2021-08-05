@@ -40,3 +40,13 @@ p {
     display: block;
     background: #eaeaea;
 }
+ #one {
+     box-sizing: border-box;
+     width: 400px;
+     height: 400px;
+     /* border: 1px solid blue; */
+     margin: 10px auto;
+     overflow: auto;
+     background: #eaeaea;
+     padding: 20px;
+ }
