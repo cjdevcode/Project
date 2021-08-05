@@ -50,3 +50,10 @@ p {
      background: #eaeaea;
      padding: 20px;
  }
+#log1{
+    color: red;
+}
+
+#log2{
+    color: blue;
+}

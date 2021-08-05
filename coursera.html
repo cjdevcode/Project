@@ -30,7 +30,11 @@
 		</div>
 	</div>
     <div id="one">
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam nisi excepturi, dolorum consequuntur earum quibusdam veniam, expedita nobis laudantium fugit amet, eligendi quo alias deserunt maxime. Praesentium sapiente saepe facilis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatum neque provident iusto reprehenderit dolorum mollitia velit nobis dolorem eveniet quibusdam architecto, dignissimos maxime a quae! Quidem illum corporis eum?</p>
+		<h1>Data</h1>
+		<button id="bot1">Enter Data</button>
+		<p id="log1" data-valor="Microsoft 2021">Aqui la informacion guardada...</p>
+		<button id="bot2">Mostrar Data</button>
+		<p id="log2" data-word=":">:</p>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
@@ -42,6 +46,19 @@
 				$(atri).fadeIn(200)
 			});
 		})
+		const info = document.querySelector('#log1');
+		const result = document.querySelector('#log2');
+		let boton1 = document.querySelector('#bot1');
+		let boton2 = document.querySelector('#bot2');
+		boton1.addEventListener('click', function(){
+			let dato = prompt('Enter Data');
+			result.dataset.word = dato;
+		});
+		boton2.addEventListener('click', function(){
+			
+			result.innerHTML = result.getAttribute('data-word');
+		});
+		
 	</script>
 </body>
 </html>
