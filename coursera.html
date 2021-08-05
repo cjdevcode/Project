@@ -8,25 +8,38 @@
 	<link rel="stylesheet" href="stylex.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#" id="growbox">grow box</a></li>
-            <li><a href="#" id="growtext">grow text</a></li>
-            <li><a href="#" id="movebox">move box</a></li>
-            <li><a href="#" id="doall">do all</a></li>
-            <li><a href="#" id="sequence">sequence</a></li>
-        </ul>
-    </nav>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Cupcakes</a></li>
+			<li><a href="#tabs-2">Brownies</a></li>
+			<li><a href="#tabs-3">Cotton Candy</a></li>
+		</ul>
+
+		<div id="tabs-1">
+			<p>Croissant cotton candy lollipop tart lollipop donut. Applicake halvah bear claw dessert sweet roll caramels halvah toffee fruitcake. Macaroon cupcake dessert wafer tiramisu gummies pie pudding. Cotton candy jujubes applicake brownie sweet roll. Icing gingerbread tiramisu sweet roll candy. Fruitcake gummi bears jelly beans.</p>
+			<p>Sesame snaps dragée fruitcake oat cake soufflé. Macaroon jelly beans cotton candy. Pudding gingerbread chupa chups croissant brownie chocolate bar gummi bears bear claw sweet.</p>
+		</div>
+
+		<div id="tabs-2">
+			<p>Tiramisu jujubes bear claw jelly-o brownie lemon drops brownie sesame snaps. Jelly-o cupcake sesame snaps muffin sesame snaps. Cookie croissant topping carrot cake candy canes gingerbread soufflé sweet roll pie. Tootsie roll chocolate tootsie roll lollipop. Lemon drops liquorice cotton candy gummies cake ice cream cheesecake cupcake muffin.</p> 
+			<p>Tart bear claw biscuit bonbon topping wafer dessert sesame snaps ice cream. Chupa chups biscuit donut icing gummies unerdwear.com danish carrot cake cookie. Toffee soufflé gummi bears marzipan cupcake. Brownie chocolate jujubes sweet roll oat cake candy canes.</p>
+		</div>
+		<div id="tabs-3">
+			<p>Cupcake chocolate cake gummies. Brownie marzipan sesame snaps. Unerdwear.com cupcake cotton candy chocolate bar pudding. Dragée caramels tart bonbon fruitcake chocolate bar. Tart candy fruitcake dragée gummi bears topping. Unerdwear.com dragée dragée pie. Liquorice applicake marshmallow donut soufflé cookie carrot cake. Icing wafer powder sweet biscuit bear claw. Halvah jujubes dessert. Chupa chups chocolate cake biscuit fruitcake gingerbread.</p>
+			<p>Caramels toffee marzipan muffin. Cotton candy tootsie roll gummi bears fruitcake sesame snaps applicake unerdwear.com. Caramels soufflé sweet powder caramels gummi bears chocolate cake. Caramels tootsie roll bear claw topping jelly-o. Tart danish jelly bonbon. Toffee fruitcake carrot cake bear claw. Jujubes sugar plum jujubes caramels cake. Lollipop sweet danish icing donut sweet pie dessert sesame snaps.</p>
+		</div>
+	</div>
     
-    <div id="box">Chickens and Llamas!</div>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		$('#growbox').click(function(){$('#box').animate({width:'500px'})})
-		$('#growtext').click(function(){$('#box').animate({fontSize:'2em'})})
-		$('#movebox').click(function(){$('#box').animate({left:'200px'})})
-		$('#doall').click(function(){$('#box').animate({fontSize:'2em',width:'500px',fontSize:'2em',left:'200px'})})
-		$('#sequence').click(function(){$('#box').animate({fontSize:'2em'}).animate({width:'500px'}).animate({left:'300px'})})
-
+		$('#tabs > ul > li > a').click(function(){
+			$('#tabs > ul > li > a').css({background: '#a2a2a2', color: '#cecece'});
+			$(this).css({color: '#333', background: '#eaeaea'});
+			const atri = $(this).attr('href');
+			$('#tabs > div:visible').fadeOut(200, function(){
+				$(atri).fadeIn(200)
+			});
+		})
 	</script>
 </body>
 </html>
