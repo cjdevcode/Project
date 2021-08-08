@@ -4,61 +4,25 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>jQuery Animations</title>
+	<title>jQuery Slide Animations</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="stylex.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+	<script src="scriptx.js" defer></script>
 </head>
 <body>
-	<div id="tabs">
+	<div id="slider">
 		<ul>
-			<li><a href="#tabs-1">Cupcakes</a></li>
-			<li><a href="#tabs-2">Brownies</a></li>
-			<li><a href="#tabs-3">Cotton Candy</a></li>
+			<li><img src="slides/image1.jpg" alt="slideshow image"></li>
+			<li><img src="slides/image2.jpg" alt="slideshow image"></li>
+			<li><img src="slides/image3.jpg" alt="slideshow image"></li>
+			<li><img src="slides/image4.jpg" alt="slideshow image"></li>
+			<li><img src="slides/image5.jpg" alt="slideshow image"></li>
 		</ul>
-
-		<div id="tabs-1">
-			<p>Croissant cotton candy lollipop tart lollipop donut. Applicake halvah bear claw dessert sweet roll caramels halvah toffee fruitcake. Macaroon cupcake dessert wafer tiramisu gummies pie pudding. Cotton candy jujubes applicake brownie sweet roll. Icing gingerbread tiramisu sweet roll candy. Fruitcake gummi bears jelly beans.</p>
-			<p>Sesame snaps dragée fruitcake oat cake soufflé. Macaroon jelly beans cotton candy. Pudding gingerbread chupa chups croissant brownie chocolate bar gummi bears bear claw sweet.</p>
-		</div>
-
-		<div id="tabs-2">
-			<p>Tiramisu jujubes bear claw jelly-o brownie lemon drops brownie sesame snaps. Jelly-o cupcake sesame snaps muffin sesame snaps. Cookie croissant topping carrot cake candy canes gingerbread soufflé sweet roll pie. Tootsie roll chocolate tootsie roll lollipop. Lemon drops liquorice cotton candy gummies cake ice cream cheesecake cupcake muffin.</p> 
-			<p>Tart bear claw biscuit bonbon topping wafer dessert sesame snaps ice cream. Chupa chups biscuit donut icing gummies unerdwear.com danish carrot cake cookie. Toffee soufflé gummi bears marzipan cupcake. Brownie chocolate jujubes sweet roll oat cake candy canes.</p>
-		</div>
-		<div id="tabs-3">
-			<p>Cupcake chocolate cake gummies. Brownie marzipan sesame snaps. Unerdwear.com cupcake cotton candy chocolate bar pudding. Dragée caramels tart bonbon fruitcake chocolate bar. Tart candy fruitcake dragée gummi bears topping. Unerdwear.com dragée dragée pie. Liquorice applicake marshmallow donut soufflé cookie carrot cake. Icing wafer powder sweet biscuit bear claw. Halvah jujubes dessert. Chupa chups chocolate cake biscuit fruitcake gingerbread.</p>
-			<p>Caramels toffee marzipan muffin. Cotton candy tootsie roll gummi bears fruitcake sesame snaps applicake unerdwear.com. Caramels soufflé sweet powder caramels gummi bears chocolate cake. Caramels tootsie roll bear claw topping jelly-o. Tart danish jelly bonbon. Toffee fruitcake carrot cake bear claw. Jujubes sugar plum jujubes caramels cake. Lollipop sweet danish icing donut sweet pie dessert sesame snaps.</p>
-		</div>
 	</div>
-    <div id="one">
-		<h1>Data</h1>
-		<button id="bot1">Enter Data</button>
-		<p id="log1" data-valor="Microsoft 2021">Aqui la informacion guardada...</p>
-		<button id="bot2">Mostrar Data</button>
-		<p id="log2" data-word=":">:</p>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script>
-		$('#tabs > ul > li > a').click(function(){
-			$('#tabs > ul > li > a').css({background: '#a2a2a2', color: '#cecece'});
-			$(this).css({color: '#333', background: '#eaeaea'});
-			const atri = $(this).attr('href');
-			$('#tabs > div:visible').fadeOut(200, function(){
-				$(atri).fadeIn(200)
-			});
-		})
-		const info = document.querySelector('#log1');
-		const result = document.querySelector('#log2');
-		let boton1 = document.querySelector('#bot1');
-		let boton2 = document.querySelector('#bot2');
-		boton1.addEventListener('click', function(){
-			let dato = prompt('Enter Data');
-			result.dataset.word = dato;
-		});
-		boton2.addEventListener('click', function(){
-			
-			result.innerHTML = result.getAttribute('data-word');
-		});
-		
-	</script>
+
+	<p id="links"><a href="#" id="previous">previous</a><a href="#" id="next">next</a></p>
+
 </body>
 </html>

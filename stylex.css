@@ -1,59 +1,51 @@
-* { padding:0; margin:0; }
 
-body { 
-	padding: 100px 0; 
-	background:#ccc; 
-	font-family:Arial; 
-	color:#333; 
-}
-#tabs {width: 400px; margin: auto;}
-#tabs > ul > li:first-of-type a {
-    background: #eaeaea;
-    color: #333;
-}
-p {
-    line-height: 1.5em;
-    margin-bottom: 1em;
-}
-#tabs > ul {
-    list-style-type: none;
-    display: flex;
+body { padding: 100px; background:#717171; }
+
+#slider {
+	width:400px;
+	overflow:hidden;
+	border: 10px solid #4C4C4C;
+	height:266px;
+	position:relative;
+	margin:auto;
 }
 
-#tabs > ul > li > a {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    margin-right: 2px;
-    background: #a2a2a2;
-    color: #cecece;
-    text-decoration: none;
-    padding: 0 15px;
-    border-radius: 3px 3px 0 0;
-}
-#tabs div {
-    display: none;
-    padding: 15px;
-    background: #eaeaea;
-}
-#tabs div:first-of-type {
-    display: block;
-    background: #eaeaea;
-}
- #one {
-     box-sizing: border-box;
-     width: 400px;
-     height: 400px;
-     /* border: 1px solid blue; */
-     margin: 10px auto;
-     overflow: auto;
-     background: #eaeaea;
-     padding: 20px;
- }
-#log1{
-    color: red;
+#slider ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
 }
 
-#log2{
-    color: blue;
+#slider ul li img {
+	display: block;
+}
+
+/********** Link Styles ***********/
+
+#links {
+	width:420px;
+	display: flex;
+	margin: 0 auto;
+}
+
+#links a {
+	display:block;
+	width:210px;
+	background:#6C0204;
+	height:50px;
+	line-height:50px;
+	color:#D5D5D5;
+	text-decoration:none;
+	font-family:Arial;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+#links a:hover {
+	background:#A51D1F;
+	color:#fff;
 }
