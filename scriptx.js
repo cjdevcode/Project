@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
     });
     pre.addEventListener('click', function (e) {
         e.preventDefault();
-        count--
+        count--;
         if (count < 0) { count = sldcont - 1 }
         leftpos = `-${sldwidth * count}px`;
         slider.style.left = leftpos;
