@@ -62,8 +62,8 @@
         const navi = document.querySelector('nav'); 
         const light = 'navbar bg-light navbar-light navbar-expand-sm';
         const dark = 'navbar bg-dark navbar-dark navbar-expand-sm';
-        document.querySelector('.btn-light').onclick = () => navi.setAttribute('class', light);
-        document.querySelector('.btn-dark').onclick = () => navi.setAttribute('class', dark);
+        document.querySelector('.btn-light').onclick = () => navi.className = light;
+        document.querySelector('.btn-dark').onclick = () => navi.className = dark;
       </script>
 </body>
 </html>
